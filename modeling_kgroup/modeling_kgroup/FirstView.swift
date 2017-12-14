@@ -25,6 +25,7 @@ class FirstView: UIView {
     //時間表示用のラベル.
     var myLabel = UILabel()
     var timerMeasurementButton  = RaisedButton()
+//    let viewController = ViewController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,33 +47,17 @@ class FirstView: UIView {
             $0.layer.cornerRadius = 0
             $0.backgroundColor = UIColor.gray
             $0.pulseColor = UIColor.gray
+//            $0.addTarget(self, action: #selector(viewController.onClickMyButton), for: .touchUpInside)
             self.addSubview($0)
         }
         
         _ = self.myLabel.then{
             $0.text = "\(minute)分\(cnt)秒"
-//            $0.textColor = UIColor.white
-//            $0.shadowColor = UIColor.gray
-//            $0.textAlignment = NSTextAlignment.center
             $0.layer.cornerRadius = 0
             $0.backgroundColor = UIColor.gray
             self.addSubview($0)
         }
-        //ラベルを作る.
-//        myLabel = UILabel(frame: CGRect(x:0,y:0,width:200,height:50))
-//        myLabel.backgroundColor = UIColor.orange
-//        myLabel.layer.masksToBounds = true
-//        myLabel.layer.cornerRadius = 20.0
-//        myLabel.text = "\(minute)分\(cnt)秒"
-//        myLabel.textColor = UIColor.white
-//        myLabel.shadowColor = UIColor.gray
-//        myLabel.textAlignment = NSTextAlignment.center
-////        myLabel.layer.position = CGPoint(x: self.bounds.width/2,y: 200)
-//        self.backgroundColor = UIColor.cyan
-//        self.addSubview(myLabel)
-        
-        //タイマーを作る.
-//        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+
         
     }
     
@@ -89,30 +74,14 @@ class FirstView: UIView {
         }
         self.myLabel.snp.makeConstraints {
             $0.left.bottom.height.equalToSuperview()
+//            $0.width.equalTo(100)
 //            $0.bottom.equalTo(buttonsize.width)
 //            $0.height.equalTo(buttonSize.height)
             $0.right.equalTo(self.snp.centerX)
         }
         
     }
-    @objc func onUpdate(timer : Timer){
-        
-        //        cnt += 0.1
-        if (cnt <= 0.00 && minute == 0){
-            myLabel.text = "カウント終了"
-        }else if(cnt <= 0.00){
-            minute -= 1
-            cnt += 60
-        }else{
-            cnt -= 0.01
-        }
-        
-        
-        //桁数を指定して文字列を作る.
-        let str = "\(minute)分".appendingFormat("%.2f",cnt)
-        //        let str = "\(minute)分\(cnt)秒"
-        
-        myLabel.text = str
-        
-    }
+    
+    
+
 }

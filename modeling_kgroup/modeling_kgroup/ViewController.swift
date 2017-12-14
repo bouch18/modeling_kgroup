@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var firstView = FirstView()
@@ -17,6 +18,8 @@ class ViewController: UIViewController {
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.prepareAction()
         
         Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
 
@@ -40,6 +43,26 @@ class ViewController: UIViewController {
         firstView.myLabel.text = str
         
     }
+    
+    
+    @objc func onClickMyButton(sender: UIButton){
+        
+        // 遷移するViewを定義する.
+        let mySecondViewController: UIViewController = SecondViewController()
+        // アニメーションを設定する.
+//        mySecondViewController.modalTransitionStyle = .partialCurl
+        // Viewの移動する.
+        self.present(mySecondViewController, animated: true, completion: nil)
+    }
 }
+
+extension ViewController {
+    fileprivate func prepareAction() {
+
+        self.firstView.timerMeasurementButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+      
+    }
+}
+
 
 
