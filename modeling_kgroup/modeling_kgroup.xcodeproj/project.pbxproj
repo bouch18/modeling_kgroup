@@ -15,6 +15,7 @@
 		7D5FABCE1FB3F5050005B1CA /* modeling_kgroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABCD1FB3F5050005B1CA /* modeling_kgroupTests.swift */; };
 		7D5FABD91FB3F5050005B1CA /* modeling_kgroupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABD81FB3F5050005B1CA /* modeling_kgroupUITests.swift */; };
 		7D723FED1FDFDADA0094B716 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D723FEC1FDFDADA0094B716 /* FirstView.swift */; };
+		7DC81B9D1FE202B500AF677C /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81B9C1FE202B500AF677C /* WarningView.swift */; };
 		7DE673691FE0F18B00DEA998 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE6736D1FE0F18B00DEA998 /* Material.framework */; };
 		7DE6736A1FE0F18B00DEA998 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE6736E1FE0F18B00DEA998 /* Motion.framework */; };
 		7DE6736B1FE0F18B00DEA998 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE6736F1FE0F18B00DEA998 /* SnapKit.framework */; };
@@ -55,6 +56,7 @@
 		7D5FABD81FB3F5050005B1CA /* modeling_kgroupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeling_kgroupUITests.swift; sourceTree = "<group>"; };
 		7D5FABDA1FB3F5050005B1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D723FEC1FDFDADA0094B716 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		7DC81B9C1FE202B500AF677C /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		7DE6736D1FE0F18B00DEA998 /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE6736E1FE0F18B00DEA998 /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE6736F1FE0F18B00DEA998 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				7D723FEC1FDFDADA0094B716 /* FirstView.swift */,
+				7DC81B9C1FE202B500AF677C /* WarningView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5FABBB1FB3F5050005B1CA /* ViewController.swift in Sources */,
+				7DC81B9D1FE202B500AF677C /* WarningView.swift in Sources */,
 				7D723FED1FDFDADA0094B716 /* FirstView.swift in Sources */,
 				7D5FABB91FB3F5050005B1CA /* AppDelegate.swift in Sources */,
 			);
