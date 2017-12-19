@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class SecondViewController: UIViewController {
     
@@ -21,21 +22,37 @@ class SecondViewController: UIViewController {
         self.prepareAction()
     }
     @objc func onClickMyButton(sender: UIButton){        
-        // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = WarningViewController()
-        // アニメーションを設定する.
-        //        mySecondViewController.modalTransitionStyle = .partialCurl
-        // Viewの移動する.
-        self.present(mySecondViewController, animated: false, completion: nil)
+        
+        let myAlert: UIAlertController = UIAlertController(title: "\"アニマム\"は写真へのアクセスを求めています", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // OKアクション生成.
+        let CancelAction = UIAlertAction(title: "許可しない", style: UIAlertActionStyle.default) { (action: UIAlertAction!) -> Void in
+//            print("許可しない")
+        }
+        
+        // Cancelアクション生成.
+        let OkAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive) { (action: UIAlertAction!) -> Void in
+            let mySecondViewController: UIViewController = WarningViewController()
+            AudioServicesPlaySystemSound (1016)
+            self.present(mySecondViewController, animated: true, completion: nil)
+//            print("OK")
+        }
+        
+        
+        myAlert.addAction(OkAction)
+        myAlert.addAction(CancelAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     @objc func onClickCancelButton(sender: UIButton){
         // 遷移するViewを定義する.
         let mySecondViewController: UIViewController = ViewController()
+//        AudioServicesPlaySystemSound(1108)
         // アニメーションを設定する.
         //        mySecondViewController.modalTransitionStyle = .partialCurl
         // Viewの移動する.
         self.present(mySecondViewController, animated: false, completion: nil)
+        
     }
     
 }

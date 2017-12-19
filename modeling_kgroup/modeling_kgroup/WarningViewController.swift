@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 
 class WarningViewController: UIViewController {
@@ -22,6 +23,8 @@ class WarningViewController: UIViewController {
         self.prepareAction()
         
         Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(WarningViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+        
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(WarningViewController.onSounds(timer:)), userInfo: nil, repeats: true)
         
     }
     
@@ -42,6 +45,10 @@ class WarningViewController: UIViewController {
         _ = "\(warningView.minute):\(warningView.cnt)"
         warningView.myLabel.text = str
 
+    }
+    
+    @objc func onSounds(timer : Timer){
+        AudioServicesPlaySystemSound (1016)
     }
     
     

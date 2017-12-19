@@ -25,6 +25,10 @@ class WarningView: UIView {
     var warningLabel = UILabel()
     var timerMeasurementButton  = RaisedButton()
     let viewController = ViewController()
+    let warningText = NSDataAsset(name: "sample-text.txt")
+    //    利用規約本文用view
+    let warningTextView: UITextView = UITextView()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +45,8 @@ class WarningView: UIView {
     
     private func setup() {
         
-        self.backgroundColor = UIColor.red
+//        self.backgroundColor = UIColor.red
+        self.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
         
         _ = self.myLabel.then{
             $0.text = "\(minute):\(cnt)"
@@ -57,7 +62,7 @@ class WarningView: UIView {
             $0.font = UIFont.systemFont(ofSize: 36)
             $0.layer.cornerRadius = 10
             $0.textAlignment = NSTextAlignment.center
-            $0.backgroundColor = UIColor.red
+            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
             $0.textColor = UIColor.white
             self.addSubview($0)
         }
