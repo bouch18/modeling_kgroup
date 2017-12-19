@@ -13,19 +13,62 @@ import AudioToolbox
 class WarningViewController: UIViewController {
     
     var warningView = WarningView()
+    var timerSound : Timer?
+    var timerLimit : Timer?
+
     
     override func loadView() {
         self.view = warningView
+        
+        self.startLimitTimer()
+        self.startSoundTimer()
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
         
         self.prepareAction()
         
-        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(WarningViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+//        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(WarningViewController.onUpdate(timer:)), userInfo: nil, repeats: true)
+//
+//        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(WarningViewController.onSounds(timer:)), userInfo: nil, repeats: true)
         
-        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(WarningViewController.onSounds(timer:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func startLimitTimer() {
         
+//        if startLimitTimer == nil {
+            timerLimit =  Timer.scheduledTimer(
+                timeInterval: TimeInterval(0.01),
+                target      : self,
+                selector    : #selector(WarningViewController.onUpdate(timer:)),
+                userInfo    : nil,
+                repeats     : true)
+//        }
+    }
+    
+    @objc func stopTimerTest() {
+//        if startLimitTimer != nil {
+            timerLimit?.invalidate()
+//            startLimitTimer = nil
+//        }
+    }
+    @objc func startSoundTimer() {
+        
+        //        if startLimitTimer == nil {
+        timerSound =  Timer.scheduledTimer(
+            timeInterval: TimeInterval(0.5),
+            target      : self,
+            selector    : #selector(WarningViewController.onSounds(timer:)),
+            userInfo    : nil,
+            repeats     : true)
+        //        }
+    }
+    
+    @objc func stopSoundTest() {
+        //        if startLimitTimer != nil {
+        timerSound?.invalidate()
+        //            startLimitTimer = nil
+        //        }
     }
     
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
@@ -48,18 +91,60 @@ class WarningViewController: UIViewController {
     }
     
     @objc func onSounds(timer : Timer){
-        AudioServicesPlaySystemSound (1016)
+        if (warningView.minute >= 30){
+            AudioServicesPlaySystemSound (1016)
+        }
     }
     
     
-    @objc func onClickMyButton(sender: UIButton){
+    @objc func onPaymentButton(sender: UIButton){
         
-        // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = SecondViewController()
-        // アニメーションを設定する.
-        //        mySecondViewController.modalTransitionStyle = .partialCurl
-        // Viewの移動する.
-        self.present(mySecondViewController, animated: true, completion: nil)
+        let myAlert: UIAlertController = UIAlertController(title: "お支払のためにbitcoinに移動しますか？", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // cancelアクション生成.
+        let CancelAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default) { (action: UIAlertAction!) -> Void in
+            //            print("許可しない")
+        }
+        
+        // okアクション生成.
+        let OkAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.destructive) { (action: UIAlertAction!) -> Void in
+            let mySecondViewController: UIViewController = WarningViewController()
+            AudioServicesPlaySystemSound (1016)
+            self.present(mySecondViewController, animated: true, completion: nil)
+            self.stopTimerTest()
+            self.stopSoundTest()
+            //            print("OK")
+        }
+        
+        
+        myAlert.addAction(OkAction)
+        myAlert.addAction(CancelAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    @objc func onCancelButton(sender: UIButton){
+        
+        let myAlert: UIAlertController = UIAlertController(title: "本当にcancelしますか？", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // OKアクション生成.
+        let CancelAction = UIAlertAction(title: "いいえ", style: UIAlertActionStyle.default) { (action: UIAlertAction!) -> Void in
+            //            print("許可しない")
+        }
+        
+        // Cancelアクション生成.
+        let OkAction = UIAlertAction(title: "はい", style: UIAlertActionStyle.destructive) { (action: UIAlertAction!) -> Void in
+            let myNextViewController: UIViewController = WarningNextViewController()
+//            AudioServicesPlaySystemSound (1016)
+            self.present(myNextViewController, animated: true, completion: nil)
+            self.stopTimerTest()
+            self.stopSoundTest()
+            //            print("OK")
+        }
+        
+        
+        myAlert.addAction(OkAction)
+        myAlert.addAction(CancelAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     //    override func didReceiveMemoryWarning() {
@@ -71,7 +156,8 @@ class WarningViewController: UIViewController {
 extension WarningViewController {
     fileprivate func prepareAction() {
         
-        self.warningView.timerMeasurementButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+        self.warningView.paymentButton.addTarget(self, action: #selector(self.onPaymentButton), for: .touchUpInside)
+        self.warningView.cancelButton.addTarget(self, action: #selector(self.onCancelButton), for: .touchUpInside)
         
     }
 }

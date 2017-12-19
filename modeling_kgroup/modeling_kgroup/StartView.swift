@@ -56,14 +56,6 @@ class StartView: UIView {
             self.addSubview($0)
         }
         
-        _ = self.myTextView.then{
-            $0.frame = myScrollView.frame
-            $0.text = "1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n"
-            $0.layer.masksToBounds = true
-            $0.layer.cornerRadius = 5
-            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.45)
-            self.addSubview($0)
-        }
         
         
     }

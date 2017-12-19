@@ -35,6 +35,7 @@ class SecondViewController: UIViewController {
             let mySecondViewController: UIViewController = WarningViewController()
             AudioServicesPlaySystemSound (1016)
             self.present(mySecondViewController, animated: true, completion: nil)
+            
 //            print("OK")
         }
         

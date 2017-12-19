@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         // アニメーションを設定する.
 //        mySecondViewController.modalTransitionStyle = .partialCurl
         // Viewの移動する.
-        self.present(mySecondViewController, animated: false, completion: nil)
+        self.present(mySecondViewController, animated: true, completion: nil)
     }
     
 }
