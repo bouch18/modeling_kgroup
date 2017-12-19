@@ -18,10 +18,11 @@ class WarningView: UIView {
     //    var oclock : Int =
     var minute : Int = 30
     
-    //    var second : Int = 0
+
     
     //時間表示用のラベル.
     var myLabel = UILabel()
+    var warningLabel = UILabel()
     var timerMeasurementButton  = RaisedButton()
     let viewController = ViewController()
     
@@ -40,10 +41,24 @@ class WarningView: UIView {
     
     private func setup() {
         
+        self.backgroundColor = UIColor.red
+        
         _ = self.myLabel.then{
-            $0.text = "\(minute)分\(cnt)秒"
-            $0.layer.cornerRadius = 0
-            $0.backgroundColor = UIColor.gray
+            $0.text = "\(minute):\(cnt)"
+            $0.layer.cornerRadius = 20
+            $0.textAlignment = NSTextAlignment.center
+            $0.backgroundColor = UIColor.white
+            $0.textColor = UIColor.red
+            self.addSubview($0)
+        }
+        
+        _ = self.warningLabel.then{
+            $0.text = "WARNING"
+            $0.font = UIFont.systemFont(ofSize: 36)
+            $0.layer.cornerRadius = 10
+            $0.textAlignment = NSTextAlignment.center
+            $0.backgroundColor = UIColor.red
+            $0.textColor = UIColor.white
             self.addSubview($0)
         }
         
@@ -53,14 +68,22 @@ class WarningView: UIView {
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
     override func layoutSubviews() {
         super.layoutSubviews()
-    
+        
+        let buttonSize = CGSize(width: 200, height: 52)
+        let warningSize = CGSize(width: 400, height: 150)
 
         self.myLabel.snp.makeConstraints {
-            $0.left.bottom.height.equalToSuperview()
-            $0.width.equalTo(100)
-            //            $0.bottom.equalTo(buttonsize.width)
-            //            $0.height.equalTo(buttonSize.height)
-            $0.right.equalTo(self.snp.centerX)
+            $0.centerX.equalToSuperview().multipliedBy(1.3)
+            $0.centerY.equalToSuperview().multipliedBy(0.5)
+            $0.width.equalTo(buttonSize.width)
+            $0.height.equalTo(buttonSize.height)
+        }
+        
+        self.warningLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalToSuperview().multipliedBy(0.8)
+            $0.width.equalTo(warningSize.width)
+            $0.height.equalTo(warningSize.height)
         }
         
     }

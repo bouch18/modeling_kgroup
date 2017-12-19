@@ -15,17 +15,22 @@ import SnapKit
 
 class FirstView: UIView {
     
-    //時間計測用の変数.
-    var cnt : Float = 10.00
-    //    var oclock : Int =
-    var minute : Int = 30
     
-    //    var second : Int = 0
-
     //時間表示用のラベル.
-    var myLabel = UILabel()
-    var timerMeasurementButton  = RaisedButton()
-//    let viewController = ViewController()
+    var cancelButton = RaisedButton()
+    var permissionButton = RaisedButton()
+    let imageView = UIImageView(image:UIImage(named: "title-iloveimg-cropped.png")!)
+    
+    let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
+    let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
+    
+    //    private var myScrollView: UIScrollView!
+    var myScrollView = UIScrollView()
+    
+    let titleTextView: UILabel = UILabel()
+//    利用規約本文用view
+    let myTextView: UITextView = UITextView()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,22 +47,46 @@ class FirstView: UIView {
     
     private func setup() {
         
-        _ = self.timerMeasurementButton.then{
-            $0.setTitle("Timer Rec", for: .normal)
-            $0.layer.cornerRadius = 0
-            $0.backgroundColor = UIColor.gray
-            $0.pulseColor = UIColor.gray
-//            $0.addTarget(self, action: #selector(viewController.onClickMyButton), for: .touchUpInside)
+        self.backgroundColor = UIColor.cyan
+        
+        _ = self.imageView.then{
             self.addSubview($0)
         }
         
-        _ = self.myLabel.then{
-            $0.text = "\(minute)分\(cnt)秒"
-            $0.layer.cornerRadius = 0
-            $0.backgroundColor = UIColor.gray
+        _ = self.titleTextView.then{
+            $0.text = "利用規約"
+            $0.textColor = UIColor.white
+            $0.backgroundColor = UIColor(red:0.110,green: 0.510, blue: 0.667, alpha: 0.85)
+            $0.textAlignment = NSTextAlignment.center
+            $0.font = UIFont.systemFont(ofSize: 26)
             self.addSubview($0)
         }
-
+        
+        _ = self.myTextView.then{
+            $0.text = "1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n"
+            $0.isEditable = false
+            $0.isSelectable = false
+            $0.font = UIFont.systemFont(ofSize: 16)
+            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.85)
+            self.addSubview($0)
+        }
+        
+        _ = self.cancelButton.then{
+            $0.setTitle("取り消し", for: .normal)
+            $0.layer.cornerRadius = 5
+//            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
+            $0.backgroundColor = UIColor(red:0.502,green: 0.475, blue: 0.525, alpha: 0.95)
+            $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
+            self.addSubview($0)
+        }
+        
+        _ = self.permissionButton.then{
+            $0.setTitle("承認", for: .normal)
+            $0.layer.cornerRadius = 5
+            $0.backgroundColor = UIColor(red:0.816,green: 0.259, blue: 0.333, alpha: 0.95)
+            $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
+            self.addSubview($0)
+        }
         
     }
     
@@ -65,23 +94,47 @@ class FirstView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let buttonSize = CGSize(width: 0, height: 52)
-
-        timerMeasurementButton.snp.makeConstraints {
-            $0.right.bottom.equalToSuperview()
-            $0.height.equalTo(buttonSize.height)
-            $0.left.equalTo(self.snp.centerX)
-        }
-        self.myLabel.snp.makeConstraints {
-            $0.left.bottom.height.equalToSuperview()
-//            $0.width.equalTo(100)
-//            $0.bottom.equalTo(buttonsize.width)
-//            $0.height.equalTo(buttonSize.height)
-            $0.right.equalTo(self.snp.centerX)
+//        let buttonSize = CGSize(width: 200, height: 52)
+        
+        imageView.snp.makeConstraints {
+            $0.right.bottom.left.top.equalToSuperview()
         }
         
-    }
-    
-    
+        titleTextView.snp.makeConstraints {
+            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.3)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.1)
+        }
+        
 
+        myTextView.snp.makeConstraints {
+            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.bottom.equalToSuperview().multipliedBy(0.95)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.3)
+        }
+        
+        cancelButton.snp.makeConstraints {
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
+            $0.bottom.equalToSuperview().multipliedBy(0.95)
+            $0.right.equalTo(self.snp.centerX)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
+        }
+        permissionButton.snp.makeConstraints {
+            //            $0.right.bottom.equalToSuperview()
+//            $0.centerX.equalToSuperview()
+//            $0.centerY.equalToSuperview().multipliedBy(1.5)
+            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.bottom.equalToSuperview().multipliedBy(0.95)
+            $0.left.equalTo(self.snp.centerX)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
+            //            $0.left.equalTo(self.snp.centerX)
+        }
+        
+        
+        
+    }
 }
+
+

@@ -32,11 +32,11 @@ class ViewController: UIViewController {
     @objc func onClickMyButton(sender: UIButton){
         
         // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = WarningViewController()
+        let mySecondViewController: UIViewController = SecondViewController()
         // アニメーションを設定する.
 //        mySecondViewController.modalTransitionStyle = .partialCurl
         // Viewの移動する.
-        self.present(mySecondViewController, animated: true, completion: nil)
+        self.present(mySecondViewController, animated: false, completion: nil)
     }
     
 }

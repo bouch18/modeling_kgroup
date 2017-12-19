@@ -15,12 +15,16 @@ class StartView: UIView {
     
     
     //時間表示用のラベル.
-
-
     var timerMeasurementButton  = RaisedButton()
     let imageView = UIImageView(image:UIImage(named: "title-iloveimg-cropped.png")!)
     
-    // 表示する座標を設定.
+    let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
+    let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
+    
+//    private var myScrollView: UIScrollView!
+    var myScrollView = UIScrollView()
+
+    let myTextView: UILabel = UILabel()
 
     
     override init(frame: CGRect) {
@@ -38,6 +42,8 @@ class StartView: UIView {
     
     private func setup() {
         
+        self.backgroundColor = UIColor.cyan
+        
         _ = self.imageView.then{
             self.addSubview($0)
         }
@@ -49,6 +55,17 @@ class StartView: UIView {
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.765)
             self.addSubview($0)
         }
+        
+        _ = self.myTextView.then{
+            $0.frame = myScrollView.frame
+            $0.text = "1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n"
+            $0.layer.masksToBounds = true
+            $0.layer.cornerRadius = 5
+            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.45)
+            self.addSubview($0)
+        }
+        
+        
     }
     
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
@@ -70,6 +87,7 @@ class StartView: UIView {
             $0.height.equalTo(buttonSize.height)
 //            $0.left.equalTo(self.snp.centerX)
         }
+        
         
 
 

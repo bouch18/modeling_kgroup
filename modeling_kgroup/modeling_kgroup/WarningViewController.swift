@@ -11,10 +11,10 @@ import UIKit
 
 class WarningViewController: UIViewController {
     
-    var firstView = FirstView()
+    var warningView = WarningView()
     
     override func loadView() {
-        self.view = firstView
+        self.view = warningView
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,21 +27,21 @@ class WarningViewController: UIViewController {
     
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
     @objc  func onUpdate(timer : Timer){
-        
-        firstView.cnt -= 0.1
-        if (firstView.cnt <= 0.00 && firstView.minute == 0){
-            firstView.myLabel.text = "カウント終了"
-        }else if(firstView.cnt <= 0.00){
-            firstView.minute -= 1
-            firstView.cnt += 60
+
+        warningView.cnt -= 0.1
+        if (warningView.cnt <= 0.00 && warningView.minute == 0){
+            warningView.myLabel.text = "カウント終了"
+        }else if(warningView.cnt <= 0.00){
+            warningView.minute -= 1
+            warningView.cnt += 60
         }else{
-            firstView.cnt -= 0.01
+            warningView.cnt -= 0.01
         }
         //桁数を指定して文字列を作る.
-        let str = "\(firstView.minute)分".appendingFormat("%.2f",firstView.cnt)
-        _ = "\(firstView.minute)分\(firstView.cnt)秒"
-        firstView.myLabel.text = str
-        
+        let str = "\(warningView.minute):".appendingFormat("%.2f",warningView.cnt)
+        _ = "\(warningView.minute):\(warningView.cnt)"
+        warningView.myLabel.text = str
+
     }
     
     
@@ -64,7 +64,7 @@ class WarningViewController: UIViewController {
 extension WarningViewController {
     fileprivate func prepareAction() {
         
-        self.firstView.timerMeasurementButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+        self.warningView.timerMeasurementButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
         
     }
 }
