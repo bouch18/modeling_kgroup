@@ -19,15 +19,14 @@ class FirstView: UIView {
     //時間表示用のラベル.
     var cancelButton = RaisedButton()
     var permissionButton = RaisedButton()
+    
     let imageView = UIImageView(image:UIImage(named: "title-iloveimg-cropped.png")!)
     
     let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
     let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
     
-    //    private var myScrollView: UIScrollView!
-    var myScrollView = UIScrollView()
-    
     let titleTextView: UILabel = UILabel()
+    let asset = NSDataAsset(name: "sample-text.txt")
 //    利用規約本文用view
     let myTextView: UITextView = UITextView()
     
@@ -62,8 +61,10 @@ class FirstView: UIView {
             self.addSubview($0)
         }
         
+        
+        
         _ = self.myTextView.then{
-            $0.text = "1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n1234567890abcdefghijklmnopqrstuwxyz 1234567890 abcdefghijklmnopqrstuwxyz \na\nb\nc\ndefghijklmnopqrstuwxyz \n http://www.gclue.com\n"
+            $0.text = String(data: (asset?.data)!, encoding: .utf8)
             $0.isEditable = false
             $0.isSelectable = false
             $0.font = UIFont.systemFont(ofSize: 16)
@@ -121,18 +122,13 @@ class FirstView: UIView {
             $0.right.equalTo(self.snp.centerX)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
         }
+        
         permissionButton.snp.makeConstraints {
-            //            $0.right.bottom.equalToSuperview()
-//            $0.centerX.equalToSuperview()
-//            $0.centerY.equalToSuperview().multipliedBy(1.5)
             $0.right.equalToSuperview().multipliedBy(0.95)
             $0.bottom.equalToSuperview().multipliedBy(0.95)
             $0.left.equalTo(self.snp.centerX)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
-            //            $0.left.equalTo(self.snp.centerX)
         }
-        
-        
         
     }
 }
