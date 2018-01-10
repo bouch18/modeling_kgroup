@@ -1,0 +1,9 @@
+まずxcodeでswiftを立ちあげて、
+	(1)Splash_screen_codeversion4(xcodeで表示される、一番上のファイル)　で設定を変える
+		App Icons and Launch Imagesの
+			Launch Images Sourc をLaunchimageにする
+			Launch Screen File の内容を空にする
+	(2)Asserts.xcassertsにLaunchImageができるから、それを選択する
+		対応機種を選択して、出てくるイメージに適した大きさの.pngファイルを貼り付ける
+	(3)AppDelegate.swiftの
+		func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {}のところに　sleep(3)　を追加する。　　　{LaunchScreen.storyboardの表示される時間が少ないから}
