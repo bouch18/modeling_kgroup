@@ -42,6 +42,8 @@ class WarningNextView: UIView {
         _ = self.warningNextView.then{
             $0.text = "先程の画面は2017年度に流行した\nWannaCryというマルウェアの\nデモになります。"
             $0.textColor = UIColor.black
+            $0.isEditable = false
+            $0.isSelectable = false
             $0.layer.masksToBounds = true
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.layer.cornerRadius = 5
