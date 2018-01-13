@@ -64,6 +64,19 @@ extension SecondViewController {
         self.firstView.cancelButton.addTarget(self, action: #selector(self.onClickCancelButton), for: .touchUpInside)
         self.firstView.permissionButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
         
+        
+//        let label = UILabel()
+//        label.text = "左から40、上から40のところに置く"
+//        label.textColor = UIColor.white // 見やすいように色を変えます
+//        label.backgroundColor = UIColor.blue // 見やすいように色を変えます
+//        view.addSubview(label)
+//
+//        // SnapKit
+//        // autolayoutの対象.snp.makeConstraints
+//        label.snp.makeConstraints{ (make) in // このスコープ内にautolayoutを記述する
+//            make.left.equalTo(view.snp.left).offset(40) //make.項目.どのように（何処と）
+//            make.top.equalTo(view.snp.top).offset(40)
+//        }
     }
 }
 

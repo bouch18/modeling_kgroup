@@ -74,10 +74,16 @@ class FirstView: UIView {
         _ = self.cancelButton.then{
             $0.setTitle("取り消し", for: .normal)
             $0.layer.cornerRadius = 5
-//            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
             $0.backgroundColor = UIColor(red:0.502,green: 0.475, blue: 0.525, alpha: 0.95)
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
             self.addSubview($0)
+            // SnapKit
+            // autolayoutの対象.snp.makeConstraints
+//            self.snp.makeConstraints{ (make) in
+//                make.centerY.equalTo(self.snp.centerY)
+//                make.width.equalTo(self.snp.width).dividedBy(3)
+//                make.left.equalTo(self.snp.right)
+//            }
         }
         
         _ = self.permissionButton.then{
@@ -118,14 +124,14 @@ class FirstView: UIView {
         cancelButton.snp.makeConstraints {
             $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
             $0.bottom.equalToSuperview().multipliedBy(0.95)
-            $0.right.equalTo(self.snp.centerX).multipliedBy(0.975)
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.0)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
         }
         
         permissionButton.snp.makeConstraints {
             $0.right.equalToSuperview().multipliedBy(0.95)
             $0.bottom.equalToSuperview().multipliedBy(0.95)
-            $0.left.equalTo(self.snp.centerX).multipliedBy(1.025)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(1.0)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
         }
         
