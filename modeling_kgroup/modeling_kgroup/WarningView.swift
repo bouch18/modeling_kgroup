@@ -140,14 +140,14 @@ class WarningView: UIView {
         }
         
         cancelButton.snp.makeConstraints {
-            $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.15)
             $0.bottom.equalToSuperview().multipliedBy(0.95)
             $0.right.equalTo(self.snp.centerX)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
         }
         
         paymentButton.snp.makeConstraints {
-            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.right.equalToSuperview().multipliedBy(0.1)
             $0.bottom.equalToSuperview().multipliedBy(0.95)
             $0.left.equalTo(self.snp.centerX)
             $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
