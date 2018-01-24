@@ -11,8 +11,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-    
     var startView = StartView()
 
     override func loadView() {
@@ -44,7 +42,7 @@ class ViewController: UIViewController {
 extension ViewController {
     fileprivate func prepareAction() {
 
-        self.startView.timerMeasurementButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+        self.startView.startButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
       
     }
 }

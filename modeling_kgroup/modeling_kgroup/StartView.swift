@@ -14,17 +14,12 @@ import SnapKit
 class StartView: UIView {
     
     
-    //時間表示用のラベル.
-    var timerMeasurementButton  = RaisedButton()
+    //スタートボタン
+    var startButton  = RaisedButton()
     let imageView = UIImageView(image:UIImage(named: "title-iloveimg-cropped.png")!)
     
     let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
     let bottomColor = UIColor(red:0.54, green:0.74, blue:0.74, alpha:1)
-    
-//    private var myScrollView: UIScrollView!
-    var myScrollView = UIScrollView()
-
-    let myTextView: UILabel = UILabel()
 
     
     override init(frame: CGRect) {
@@ -48,7 +43,7 @@ class StartView: UIView {
             self.addSubview($0)
         }
         
-        _ = self.timerMeasurementButton.then{
+        _ = self.startButton.then{
             $0.setTitle("始める", for: .normal)
             $0.layer.cornerRadius = 25
             $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.765)
@@ -71,7 +66,7 @@ class StartView: UIView {
         }
         
         
-        timerMeasurementButton.snp.makeConstraints {
+        startButton.snp.makeConstraints {
 //            $0.right.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().multipliedBy(1.5)
@@ -79,10 +74,6 @@ class StartView: UIView {
             $0.height.equalTo(buttonSize.height)
 //            $0.left.equalTo(self.snp.centerX)
         }
-        
-        
-
-
     }
 }
 
