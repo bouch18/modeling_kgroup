@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		354E0203200A586F003D6110 /* tw079.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 354E0202200A586F003D6110 /* tw079.mp3 */; };
 		356B6DF02008726000FA35FB /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B6DED2008725F00FA35FB /* Motion.framework */; };
 		356B6DF12008726000FA35FB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B6DEE2008725F00FA35FB /* SnapKit.framework */; };
 		356B6DF22008726000FA35FB /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B6DEF2008726000FA35FB /* Material.framework */; };
@@ -137,10 +136,10 @@
 		7D5FABB71FB3F5050005B1CA /* modeling_kgroup */ = {
 			isa = PBXGroup;
 			children = (
-				354E0202200A586F003D6110 /* tw079.mp3 */,
 				7D723FEA1FDFDA820094B716 /* Controller */,
 				7D723FE91FDFDA780094B716 /* View */,
 				7D5FABB81FB3F5050005B1CA /* AppDelegate.swift */,
+				354E0202200A586F003D6110 /* tw079.mp3 */,
 				7D5FABBC1FB3F5050005B1CA /* Main.storyboard */,
 				7D5FABBF1FB3F5050005B1CA /* Assets.xcassets */,
 				7D5FABC11FB3F5050005B1CA /* LaunchScreen.storyboard */,
@@ -327,7 +326,6 @@
 			files = (
 				7D5FABC31FB3F5050005B1CA /* LaunchScreen.storyboard in Resources */,
 				7D5FABC01FB3F5050005B1CA /* Assets.xcassets in Resources */,
-				354E0203200A586F003D6110 /* tw079.mp3 in Resources */,
 				7D5FABBE1FB3F5050005B1CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WU2X95545Z;
+				DEVELOPMENT_TEAM = 983RT7W73X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -614,7 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WU2X95545Z;
+				DEVELOPMENT_TEAM = 983RT7W73X;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
