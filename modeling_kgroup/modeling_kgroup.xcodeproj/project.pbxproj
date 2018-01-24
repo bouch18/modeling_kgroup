@@ -137,10 +137,6 @@
 				7D723FEA1FDFDA820094B716 /* Controller */,
 				7D723FE91FDFDA780094B716 /* View */,
 				7D5FABB81FB3F5050005B1CA /* AppDelegate.swift */,
-				7D5FABBA1FB3F5050005B1CA /* ViewController.swift */,
-				7DC81B9E1FE21CB600AF677C /* SecondViewController.swift */,
-				7DEEF5241FE7691500C0406D /* WarningViewController.swift */,
-				7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */,
 				7D5FABBC1FB3F5050005B1CA /* Main.storyboard */,
 				7D5FABBF1FB3F5050005B1CA /* Assets.xcassets */,
 				7D5FABC11FB3F5050005B1CA /* LaunchScreen.storyboard */,
@@ -181,6 +177,10 @@
 		7D723FEA1FDFDA820094B716 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7D5FABBA1FB3F5050005B1CA /* ViewController.swift */,
+				7DC81B9E1FE21CB600AF677C /* SecondViewController.swift */,
+				7DEEF5241FE7691500C0406D /* WarningViewController.swift */,
+				7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
