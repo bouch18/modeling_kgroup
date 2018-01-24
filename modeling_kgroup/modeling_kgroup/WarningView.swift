@@ -29,6 +29,9 @@ class WarningView: UIView {
     //    利用規約本文用view
     let warningTextView: UITextView = UITextView()
     
+    //鍵マークの画像
+    let imageView_key = UIImageView(image:UIImage(named: "key-warning.png")!)
+
     var paymentButton = RaisedButton()
     var cancelButton = RaisedButton()
     
@@ -99,7 +102,12 @@ class WarningView: UIView {
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
             self.addSubview($0)
         }
+        _ = self.imageView_key.then{
+            self.addSubview($0)
+            //$0.backgroundColor = UIColor.white
+        }
         
+
         
     }
     
@@ -154,6 +162,14 @@ class WarningView: UIView {
         }
         
         
+        imageView_key.snp.makeConstraints {
+            $0.centerY.equalToSuperview().multipliedBy(0.5)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.01)  //画像の外側の縁に無色があるため,0.01とし,warningTextViewの左側とそろえる。
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.75)
+            $0.right.equalTo(self.snp.centerX).multipliedBy(0.75)
+        }
+        
+
         
     }
 
