@@ -12,10 +12,17 @@ import Then
 import SnapKit
 
 class StartView: UIView {
+
     
     
     //スタートボタン
     var startButton  = RaisedButton()
+
+    //画面の大きさを以下で取得しています.
+    let screenWidth: CGFloat = UIScreen.main.bounds.width      //画面の幅
+    let screenHeight: CGFloat = UIScreen.main.bounds.height    //画面の高さ
+    //時間表示用のラベル.
+
     let imageView = UIImageView(image:UIImage(named: "title-iloveimg-cropped.png")!)
     
     let topColor = UIColor(red:0.07, green:0.13, blue:0.26, alpha:1)
@@ -43,12 +50,16 @@ class StartView: UIView {
             self.addSubview($0)
         }
         
+
         _ = self.startButton.then{
+
             $0.setTitle("始める", for: .normal)
             $0.layer.cornerRadius = 25
             $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.765)
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.765)
             self.addSubview($0)
+            
+
         }
         
         
@@ -59,7 +70,12 @@ class StartView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let buttonSize = CGSize(width: 200, height: 52)
+        let buttonSize = CGRect(x:screenWidth/2, y:screenHeight/2,
+                                width:screenWidth/3, height:screenHeight/10)
+        
+//        let button = UIButton.init()
+//        button.titleLabel?.adjustsFontSizeToFitWidth = true
+//        button.titleLabel?.minimumScaleFactor = 10.0  //最小でも80%までしか縮小しない場合
         
         imageView.snp.makeConstraints {
             $0.right.bottom.left.top.equalToSuperview()

@@ -8,8 +8,10 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
 
 class SecondViewController: UIViewController {
+    
     
     var firstView = FirstView()
     
@@ -64,6 +66,8 @@ extension SecondViewController {
         self.firstView.cancelButton.addTarget(self, action: #selector(self.onClickCancelButton), for: .touchUpInside)
         self.firstView.permissionButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
         
+        
+
     }
 }
 
