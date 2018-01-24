@@ -8,9 +8,6 @@
 
 import UIKit
 import Material
-//import XCGLogger
-//import RealmSwift
-//import Firebase
 
 
 let secondViewController = ViewController()
@@ -25,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        let appToolbarController = AppToolbarController(secondViewController: secondViewController)
         // Override point for customization after application launch.
-//        let appToolbarController = AppToolbarController(rootViewController: ViewController)
-//        
+
         window = UIWindow(frame: Screen.bounds)
         window!.rootViewController = secondViewController
         window!.makeKeyAndVisible()
