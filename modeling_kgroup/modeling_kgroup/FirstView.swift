@@ -116,7 +116,7 @@ class FirstView: UIView {
 
         myTextView.snp.makeConstraints {
             $0.right.equalToSuperview().multipliedBy(0.95)
-            $0.bottom.equalToSuperview().multipliedBy(0.925)
+            $0.bottom.equalToSuperview().multipliedBy(0.875)
             $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
             $0.top.equalTo(self.snp.centerY).multipliedBy(0.3)
         }
