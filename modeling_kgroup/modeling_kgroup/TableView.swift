@@ -1,9 +1,9 @@
 //
-//  WarningNextView.swift
+//  TableView.swift
 //  modeling_kgroup
 //
-//  Created by 大城 慶知 on 2017/12/19.
-//  Copyright © 2017 Univ of the Ryukyu. All rights reserved.
+//  Created by 大城 慶知 on 2018/01/25.
+//  Copyright © 2018 Univ of the Ryukyu. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import Material
 import Then
 import SnapKit
 
-class WarningNextView: UIView {
+class TableView: UIView {
     
     
     
@@ -41,17 +41,7 @@ class WarningNextView: UIView {
         self.backgroundColor = UIColor.white
         
         
-        _ = self.warningNextView.then{
-            $0.text = "先程の画面は2017年度に流行した\nWannaCryというマルウェアの\nデモになります。"
-            $0.textColor = UIColor.black
-            $0.isEditable = false
-            $0.isSelectable = false
-            $0.layer.masksToBounds = true
-            $0.font = UIFont.systemFont(ofSize: 20)
-            $0.layer.cornerRadius = 5
-            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.45)
-            self.addSubview($0)
-        }
+        
         
         _ = self.nextButton.then{
             $0.setTitle("次へ", for: .normal)
@@ -62,7 +52,7 @@ class WarningNextView: UIView {
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
             self.addSubview($0)
         }
-    
+        
         
     }
     
@@ -72,7 +62,7 @@ class WarningNextView: UIView {
         
         let buttonSize = CGSize(width: 300, height: 300)
         
-
+        
         
         
         warningNextView.snp.makeConstraints {
@@ -89,5 +79,6 @@ class WarningNextView: UIView {
         
     }
 }
+
 
 

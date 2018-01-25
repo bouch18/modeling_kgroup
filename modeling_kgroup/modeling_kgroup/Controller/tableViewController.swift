@@ -1,21 +1,20 @@
 //
-//  tableViewController.swift
+//  TableViewController.swift
 //  modeling_kgroup
 //
 //  Created by 大城 慶知 on 2018/01/25.
 //  Copyright © 2018 Univ of the Ryukyu. All rights reserved.
 //
-
 import UIKit
 
 
 
-class ViewController: UIViewController {
+class TableViewController: UIViewController {
     
-    var startView = StartView()
+    var tableView = tableView()
     
     override func loadView() {
-        self.view = startView
+        self.view = tableView
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +39,11 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController {
+extension TableViewController {
     fileprivate func prepareAction() {
         
         self.startView.startButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
         
     }
 }
+

@@ -18,9 +18,31 @@ class WarningNextViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.prepareAction()
+        
     }
-
+    
+    @objc func onClickMyButton(sender: UIButton){
+        
+        // 遷移するViewを定義する.
+        let myNextViewController: UIViewController = TableViewController()
+        // アニメーションを設定する.
+        //        mySecondViewController.modalTransitionStyle = .partialCurl
+        // Viewの移動する.
+        self.present(myNextViewController, animated: true, completion: nil)
+    }
+    
 }
+
+extension WarningNextViewController {
+    fileprivate func prepareAction() {
+        
+        self.WarningNextView.nextButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+        
+    }
+}
+
+
 
 
 
