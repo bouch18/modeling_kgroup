@@ -85,7 +85,7 @@ class WarningView: UIView {
             $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
             $0.layer.cornerRadius = 5
             //            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
-            $0.backgroundColor = UIColor.gray
+            $0.backgroundColor = UIColor.white
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
             self.addSubview($0)
         }
@@ -95,7 +95,7 @@ class WarningView: UIView {
             $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
             $0.layer.cornerRadius = 5
             //            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
-            $0.backgroundColor = UIColor.gray
+            $0.backgroundColor = UIColor.white
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
             self.addSubview($0)
         }
