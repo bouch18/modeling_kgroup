@@ -56,7 +56,7 @@ class StartView: UIView {
             $0.setTitle("始める", for: .normal)
             $0.layer.cornerRadius = 25
             $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.765)
-            $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.765)
+            $0.pulseColor = UIColor(red:0.408,green: 1.012, blue: 1.902, alpha: 0.765)
             self.addSubview($0)
             
 
