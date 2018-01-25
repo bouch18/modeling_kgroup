@@ -63,26 +63,20 @@ class StartView: UIView {
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
     override func layoutSubviews() {
         super.layoutSubviews()
+
         
-        let buttonSize = CGSize(width: 200, height: 52)
         
         imageView.snp.makeConstraints {
             $0.right.bottom.left.top.equalToSuperview()
+            
         }
         
         
         timerMeasurementButton.snp.makeConstraints {
-//            $0.right.bottom.equalToSuperview()
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(1.5)
-            $0.width.equalTo(buttonSize.width)
-            $0.height.equalTo(buttonSize.height)
-//            $0.left.equalTo(self.snp.centerX)
-        }
-        
-        
-
-
-    }
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.5)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(1.6)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.5)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(1.35)
+        }}
 }
 
