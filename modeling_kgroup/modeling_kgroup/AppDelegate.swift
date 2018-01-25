@@ -10,7 +10,7 @@ import UIKit
 import Material
 
 
-let secondViewController = ViewController()
+let startViewController = ViewController()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         window = UIWindow(frame: Screen.bounds)
-        window!.rootViewController = secondViewController
+        window!.rootViewController = startViewController
         window!.makeKeyAndVisible()
         
         sleep(3);

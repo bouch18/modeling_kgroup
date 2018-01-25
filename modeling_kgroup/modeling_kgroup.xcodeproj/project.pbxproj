@@ -12,6 +12,7 @@
 		356B6DF22008726000FA35FB /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B6DEF2008726000FA35FB /* Material.framework */; };
 		356B6DF32008758500FA35FB /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356B6DF42008758500FA35FB /* Then.framework */; };
 		374A77A46E91A62229191808 /* Pods_modeling_kgroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2810B01ED1562C6DDBCFAB8 /* Pods_modeling_kgroup.framework */; };
+		7D395C6E201967F900D63908 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D395C6D201967F900D63908 /* tableViewController.swift */; };
 		7D3D5E1A1FE232A300B448EC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D5E191FE232A300B448EC /* StartView.swift */; };
 		7D5FABB91FB3F5050005B1CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABB81FB3F5050005B1CA /* AppDelegate.swift */; };
 		7D5FABBB1FB3F5050005B1CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABBA1FB3F5050005B1CA /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		356B6DF42008758500FA35FB /* Then.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Then.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		356B6DF52008782100FA35FB /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Then.swift; path = Pods/Then/Sources/Then/Then.swift; sourceTree = "<group>"; };
 		5DC082229348AF18EE5B74D1 /* Pods-modeling_kgroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-modeling_kgroup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-modeling_kgroup/Pods-modeling_kgroup.debug.xcconfig"; sourceTree = "<group>"; };
+		7D395C6D201967F900D63908 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		7D3D5E191FE232A300B448EC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7D5FABB51FB3F5050005B1CA /* modeling_kgroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = modeling_kgroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5FABB81FB3F5050005B1CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7DC81B9E1FE21CB600AF677C /* SecondViewController.swift */,
 				7DEEF5241FE7691500C0406D /* WarningViewController.swift */,
 				7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */,
+				7D395C6D201967F900D63908 /* tableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				7DC81B9F1FE21CB600AF677C /* SecondViewController.swift in Sources */,
 				7DB51FC21FE8F77900F2D784 /* WarningNextViewController.swift in Sources */,
 				7D5FABB91FB3F5050005B1CA /* AppDelegate.swift in Sources */,
+				7D395C6E201967F900D63908 /* tableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +592,7 @@
 			baseConfigurationReference = 5DC082229348AF18EE5B74D1 /* Pods-modeling_kgroup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 983RT7W73X;
@@ -610,6 +615,7 @@
 			baseConfigurationReference = C53718F2BECEFCED161EB300 /* Pods-modeling_kgroup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 983RT7W73X;
