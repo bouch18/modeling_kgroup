@@ -8,7 +8,7 @@
 
 import UIKit
 import Material
-
+import AMXFontAutoScale
 
 let startViewController = ViewController()
 
@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        let appToolbarController = AppToolbarController(secondViewController: secondViewController)
         // Override point for customization after application launch.
+        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
 
         window = UIWindow(frame: Screen.bounds)
         window!.rootViewController = startViewController
