@@ -69,27 +69,30 @@ class StartView: UIView {
     //NSTimerIntervalで指定された秒数毎に呼び出されるメソッド.
     override func layoutSubviews() {
         super.layoutSubviews()
+
         
-        let buttonSize = CGRect(x:screenWidth/2, y:screenHeight/2,
-                                width:screenWidth/3, height:screenHeight/10)
+
+//        let buttonSize = CGRect(x:screenWidth/2, y:screenHeight/2,
+//                                width:screenWidth/3, height:screenHeight/10)
         
 //        let button = UIButton.init()
 //        button.titleLabel?.adjustsFontSizeToFitWidth = true
 //        button.titleLabel?.minimumScaleFactor = 10.0  //最小でも80%までしか縮小しない場合
+
         
         imageView.snp.makeConstraints {
             $0.right.bottom.left.top.equalToSuperview()
+            
         }
         
         
+
         startButton.snp.makeConstraints {
-//            $0.right.bottom.equalToSuperview()
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(1.5)
-            $0.width.equalTo(buttonSize.width)
-            $0.height.equalTo(buttonSize.height)
-//            $0.left.equalTo(self.snp.centerX)
-        }
-    }
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.5)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(1.6)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.5)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(1.35)
+        }}
+
 }
 
