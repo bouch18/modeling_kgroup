@@ -55,7 +55,7 @@ class FirstView: UIView {
         _ = self.titleTextView.then{
             $0.text = "利用規約"
             $0.textColor = UIColor.white
-            $0.backgroundColor = UIColor(red:0.110,green: 0.510, blue: 0.667, alpha: 0.85)
+            $0.backgroundColor = UIColor(red:0.110,green: 0.510, blue: 0.667, alpha: 0.9)
             $0.textAlignment = NSTextAlignment.center
             $0.font = UIFont.systemFont(ofSize: 26)
             self.addSubview($0)
@@ -67,7 +67,7 @@ class FirstView: UIView {
             $0.isEditable = false
             $0.isSelectable = false
             $0.font = UIFont.systemFont(ofSize: 16)
-            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.85)
+            $0.backgroundColor = UIColor(red:1,green: 1, blue: 1, alpha: 0.9)
             self.addSubview($0)
         }
         

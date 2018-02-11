@@ -10,10 +10,10 @@ import UIKit
 
 class WarningNextViewController: UIViewController {
     
-    var warningView = WarningNextView()
+    var warningNextView = WarningNextView()
     
     override func loadView() {
-        self.view = warningView
+        self.view = warningNextView
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class WarningNextViewController: UIViewController {
 extension WarningNextViewController {
     fileprivate func prepareAction() {
         
-        self.WarningNextView.nextButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
+        self.warningNextView.nextButton.addTarget(self, action: #selector(self.onClickMyButton), for: .touchUpInside)
         
     }
 }
