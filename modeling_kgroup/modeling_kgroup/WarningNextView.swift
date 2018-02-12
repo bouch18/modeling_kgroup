@@ -70,20 +70,24 @@ class WarningNextView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let buttonSize = CGSize(width: 300, height: 300)
+//        let buttonSize = CGSize(width: 300, height: 300)
         
 
         
         
         warningNextView.snp.makeConstraints {
-            //            $0.right.bottom.equalToSuperview()
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(0.7)
-            $0.width.equalTo(buttonSize.width)
-            $0.height.equalTo(buttonSize.height)
-            //            $0.left.equalTo(self.snp.centerX)
+            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.bottom.equalToSuperview().multipliedBy(0.85)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.75)
         }
         
+        nextButton.snp.makeConstraints {
+            $0.right.equalToSuperview().multipliedBy(0.95)
+            $0.bottom.equalToSuperview().multipliedBy(0.95)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(1.025)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(1.75)
+        }
         
         
         

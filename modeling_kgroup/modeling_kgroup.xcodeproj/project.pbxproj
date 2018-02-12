@@ -24,6 +24,22 @@
 		7D5FABD91FB3F5050005B1CA /* modeling_kgroupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABD81FB3F5050005B1CA /* modeling_kgroupUITests.swift */; };
 		7D723FED1FDFDADA0094B716 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D723FEC1FDFDADA0094B716 /* FirstView.swift */; };
 		7DAE771420307D880082ACE9 /* AMXFontAutoScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAE771520307D880082ACE9 /* AMXFontAutoScale.framework */; };
+		7DAE77172031379B0082ACE9 /* CardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE77162031379B0082ACE9 /* CardTableView.swift */; };
+		7DAE771920313A720082ACE9 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE771820313A720082ACE9 /* CardTableViewCell.swift */; };
+		7DAE771A20313B460082ACE9 /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAE771B20313B460082ACE9 /* Graph.framework */; };
+		7DAE771D20313C030082ACE9 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE771C20313C030082ACE9 /* PostsViewController.swift */; };
+		7DAE771F20313C720082ACE9 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE771E20313C720082ACE9 /* SampleData.swift */; };
+		7DAE778C203145580082ACE9 /* AppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE7781203145560082ACE9 /* AppToolbarController.swift */; };
+		7DAE778D203145580082ACE9 /* photo5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7782203145560082ACE9 /* photo5.jpg */; };
+		7DAE778E203145580082ACE9 /* photo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7783203145560082ACE9 /* photo7.jpg */; };
+		7DAE778F203145580082ACE9 /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7784203145570082ACE9 /* photo8.jpg */; };
+		7DAE7790203145580082ACE9 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE7785203145570082ACE9 /* AppTabBarController.swift */; };
+		7DAE7791203145580082ACE9 /* photo6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7786203145570082ACE9 /* photo6.jpg */; };
+		7DAE7792203145580082ACE9 /* photo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7787203145570082ACE9 /* photo4.jpg */; };
+		7DAE7793203145580082ACE9 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7788203145570082ACE9 /* photo2.jpg */; };
+		7DAE7794203145580082ACE9 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE7789203145570082ACE9 /* photo3.jpg */; };
+		7DAE7795203145580082ACE9 /* AppFABMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE778A203145580082ACE9 /* AppFABMenuController.swift */; };
+		7DAE7796203145580082ACE9 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DAE778B203145580082ACE9 /* photo1.jpg */; };
 		7DB51FC21FE8F77900F2D784 /* WarningNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */; };
 		7DB51FC41FE8F7BD00F2D784 /* WarningNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB51FC31FE8F7BD00F2D784 /* WarningNextView.swift */; };
 		7DC81B9D1FE202B500AF677C /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81B9C1FE202B500AF677C /* WarningView.swift */; };
@@ -75,6 +91,22 @@
 		7D5FABDA1FB3F5050005B1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D723FEC1FDFDADA0094B716 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7DAE771520307D880082ACE9 /* AMXFontAutoScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AMXFontAutoScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAE77162031379B0082ACE9 /* CardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableView.swift; sourceTree = "<group>"; };
+		7DAE771820313A720082ACE9 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		7DAE771B20313B460082ACE9 /* Graph.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Graph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAE771C20313C030082ACE9 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		7DAE771E20313C720082ACE9 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		7DAE7781203145560082ACE9 /* AppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToolbarController.swift; sourceTree = "<group>"; };
+		7DAE7782203145560082ACE9 /* photo5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo5.jpg; sourceTree = "<group>"; };
+		7DAE7783203145560082ACE9 /* photo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo7.jpg; sourceTree = "<group>"; };
+		7DAE7784203145570082ACE9 /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo8.jpg; sourceTree = "<group>"; };
+		7DAE7785203145570082ACE9 /* AppTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		7DAE7786203145570082ACE9 /* photo6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo6.jpg; sourceTree = "<group>"; };
+		7DAE7787203145570082ACE9 /* photo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo4.jpg; sourceTree = "<group>"; };
+		7DAE7788203145570082ACE9 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo2.jpg; sourceTree = "<group>"; };
+		7DAE7789203145570082ACE9 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo3.jpg; sourceTree = "<group>"; };
+		7DAE778A203145580082ACE9 /* AppFABMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFABMenuController.swift; sourceTree = "<group>"; };
+		7DAE778B203145580082ACE9 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo1.jpg; sourceTree = "<group>"; };
 		7DB51FBE1FE8DE1300F2D784 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNextViewController.swift; sourceTree = "<group>"; };
 		7DB51FC31FE8F7BD00F2D784 /* WarningNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningNextView.swift; sourceTree = "<group>"; };
@@ -91,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAE771A20313B460082ACE9 /* Graph.framework in Frameworks */,
 				7DAE771420307D880082ACE9 /* AMXFontAutoScale.framework in Frameworks */,
 				356B6DF32008758500FA35FB /* Then.framework in Frameworks */,
 				356B6DF02008726000FA35FB /* Motion.framework in Frameworks */,
@@ -186,18 +219,50 @@
 		7D723FEA1FDFDA820094B716 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7DAE7780203144790082ACE9 /* Tutorial */,
+				7DAE777E2031444A0082ACE9 /* Root */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7DAE777E2031444A0082ACE9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7DAE77162031379B0082ACE9 /* CardTableView.swift */,
+				7DAE771820313A720082ACE9 /* CardTableViewCell.swift */,
+				7DAE778A203145580082ACE9 /* AppFABMenuController.swift */,
+				7DAE7785203145570082ACE9 /* AppTabBarController.swift */,
+				7DAE7781203145560082ACE9 /* AppToolbarController.swift */,
+				7DAE778B203145580082ACE9 /* photo1.jpg */,
+				7DAE7788203145570082ACE9 /* photo2.jpg */,
+				7DAE7789203145570082ACE9 /* photo3.jpg */,
+				7DAE7787203145570082ACE9 /* photo4.jpg */,
+				7DAE7782203145560082ACE9 /* photo5.jpg */,
+				7DAE7786203145570082ACE9 /* photo6.jpg */,
+				7DAE7783203145560082ACE9 /* photo7.jpg */,
+				7DAE7784203145570082ACE9 /* photo8.jpg */,
+				7DAE771C20313C030082ACE9 /* PostsViewController.swift */,
+				7DAE771E20313C720082ACE9 /* SampleData.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		7DAE7780203144790082ACE9 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
 				7D5FABBA1FB3F5050005B1CA /* ViewController.swift */,
 				7DC81B9E1FE21CB600AF677C /* SecondViewController.swift */,
 				7DEEF5241FE7691500C0406D /* WarningViewController.swift */,
 				7DB51FC11FE8F77900F2D784 /* WarningNextViewController.swift */,
 				7D395C71201969DA00D63908 /* TableViewController.swift */,
 			);
-			path = Controller;
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		9BE5C80718A49182864C02C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DAE771B20313B460082ACE9 /* Graph.framework */,
 				7DAE771520307D880082ACE9 /* AMXFontAutoScale.framework */,
 				356B6DF52008782100FA35FB /* Then.swift */,
 				356B6DF42008758500FA35FB /* Then.framework */,
@@ -332,9 +397,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAE7794203145580082ACE9 /* photo3.jpg in Resources */,
+				7DAE778E203145580082ACE9 /* photo7.jpg in Resources */,
+				7DAE778F203145580082ACE9 /* photo8.jpg in Resources */,
+				7DAE778D203145580082ACE9 /* photo5.jpg in Resources */,
+				7DAE7796203145580082ACE9 /* photo1.jpg in Resources */,
 				7D5FABC31FB3F5050005B1CA /* LaunchScreen.storyboard in Resources */,
 				7D5FABC01FB3F5050005B1CA /* Assets.xcassets in Resources */,
+				7DAE7791203145580082ACE9 /* photo6.jpg in Resources */,
 				7D5FABBE1FB3F5050005B1CA /* Main.storyboard in Resources */,
+				7DAE7793203145580082ACE9 /* photo2.jpg in Resources */,
+				7DAE7792203145580082ACE9 /* photo4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +436,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-modeling_kgroup/Pods-modeling_kgroup-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AMXFontAutoScale/AMXFontAutoScale.framework",
+				"${BUILT_PRODUCTS_DIR}/Graph/Graph.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -371,6 +445,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMXFontAutoScale.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Graph.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -421,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DAE771D20313C030082ACE9 /* PostsViewController.swift in Sources */,
 				7DEEF5251FE7691500C0406D /* WarningViewController.swift in Sources */,
 				7D5FABBB1FB3F5050005B1CA /* ViewController.swift in Sources */,
 				7DC81B9D1FE202B500AF677C /* WarningView.swift in Sources */,
@@ -428,9 +504,15 @@
 				7D3D5E1A1FE232A300B448EC /* StartView.swift in Sources */,
 				7DB51FC41FE8F7BD00F2D784 /* WarningNextView.swift in Sources */,
 				7D395C72201969DA00D63908 /* TableViewController.swift in Sources */,
+				7DAE7795203145580082ACE9 /* AppFABMenuController.swift in Sources */,
+				7DAE77172031379B0082ACE9 /* CardTableView.swift in Sources */,
+				7DAE771920313A720082ACE9 /* CardTableViewCell.swift in Sources */,
+				7DAE7790203145580082ACE9 /* AppTabBarController.swift in Sources */,
 				7DC81B9F1FE21CB600AF677C /* SecondViewController.swift in Sources */,
 				7DB51FC21FE8F77900F2D784 /* WarningNextViewController.swift in Sources */,
 				7D5FABB91FB3F5050005B1CA /* AppDelegate.swift in Sources */,
+				7DAE778C203145580082ACE9 /* AppToolbarController.swift in Sources */,
+				7DAE771F20313C720082ACE9 /* SampleData.swift in Sources */,
 				7D395C702019694900D63908 /* TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 983RT7W73X;
@@ -609,12 +692,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = modeling_kgroup/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.primetheory.modeling-kgroup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -624,6 +709,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 983RT7W73X;
@@ -632,12 +718,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = modeling_kgroup/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.primetheory.modeling-kgroup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

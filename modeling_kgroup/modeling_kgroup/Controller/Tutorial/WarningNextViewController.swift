@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Material
+import Graph
 
 class WarningNextViewController: UIViewController {
     
@@ -25,11 +27,26 @@ class WarningNextViewController: UIViewController {
     @objc func onClickMyButton(sender: UIButton){
         
         // 遷移するViewを定義する.
-        let myNextViewController: UIViewController = TableViewController()
+//        let myNextViewController: UIViewController = TableViewController()
+        let graph = Graph()
+        let search = Search<Entity>(graph: graph).for(types: "Category")
+        
+        var viewControllers = [PostsViewController]()
+        
+        for category in search.sync() {
+            if let name = category["name"] as? String {
+                viewControllers.append(PostsViewController(category: name))
+            }
+        }
+//        var viewControllers = [PostsViewController]()
+        
+        let tabsController = AppTabsController(viewControllers: viewControllers)
+        let toolbarController = AppToolbarController(rootViewController: tabsController)
+        let menuController = AppFABMenuController(rootViewController: toolbarController)
         // アニメーションを設定する.
         //        mySecondViewController.modalTransitionStyle = .partialCurl
         // Viewの移動する.
-        self.present(myNextViewController, animated: true, completion: nil)
+        self.present(menuController, animated: true, completion: nil)
     }
     
 }
