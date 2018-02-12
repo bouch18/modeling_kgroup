@@ -22,7 +22,13 @@ class WarningView: UIView {
     
     //時間表示用のラベル.
     var myLabel = UILabel()
+    
+    //Wanna cry のタイトル的なとこ
     var warningLabel = UILabel()
+    //Payment will be raised on
+    var paymentWarningLabel = UILabel()
+    //Time Left
+    var timeLeftLabel = UILabel()
 //    var timerMeasurementButton  = RaisedButton()
     let viewController = ViewController()
     let warningText = NSDataAsset(name: "Warning.txt")
@@ -73,6 +79,26 @@ class WarningView: UIView {
             self.addSubview($0)
         }
         
+        _ = self.paymentWarningLabel.then{
+            $0.text = "Payment will be raised on"
+            $0.font = UIFont.systemFont(ofSize: 18)
+            $0.layer.cornerRadius = 6
+            $0.textAlignment = NSTextAlignment.center
+            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.textColor = UIColor.yellow
+            self.addSubview($0)
+        }
+        
+        _ = self.timeLeftLabel.then{
+            $0.text = "Time Left"
+            $0.font = UIFont.systemFont(ofSize: 20)
+            $0.layer.cornerRadius = 10
+            $0.textAlignment = NSTextAlignment.center
+            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.textColor = UIColor.white
+            self.addSubview($0)
+        }
+        
         _ = self.warningTextView.then{
             $0.text = String(data: (warningText?.data)!, encoding: .utf8)
             $0.isEditable = false
@@ -115,32 +141,44 @@ class WarningView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let buttonSize = CGSize(width: 200, height: 52)
-        let warningSize = CGSize(width: 400, height: 100)
+//        let buttonSize = CGSize(width: 200, height: 52)
+//        let warningSize = CGSize(width: 400, height: 100)
 
         myLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview().multipliedBy(1.3)
-            $0.centerY.equalToSuperview().multipliedBy(0.5)
-            $0.width.equalTo(buttonSize.width)
-            $0.height.equalTo(buttonSize.height)
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.90)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.70)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.85)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.55)
+//            $0.centerX.equalToSuperview().multipliedBy(1.3)
+//            $0.centerY.equalToSuperview().multipliedBy(0.5)
+//            $0.width.equalTo(buttonSize.width)
+//            $0.height.equalTo(buttonSize.height)
         }
         
         warningLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().multipliedBy(0.2)
-            $0.width.equalTo(warningSize.width)
-            $0.height.equalTo(warningSize.height)
-//            $0.right.equalToSuperview().multipliedBy(0.95)
-//            $0.bottom.equalToSuperview().multipliedBy(0.95)
-//            $0.left.equalTo(self.snp.centerX).multipliedBy(0.05)
-//            $0.top.equalTo(self.snp.centerY).multipliedBy(0.4)
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.95)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.30)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.05)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.01)
+
+        }
+        
+        paymentWarningLabel.snp.makeConstraints {
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.90)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.40)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.75)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.25)
+        }
+        
+        timeLeftLabel.snp.makeConstraints {
+            $0.right.equalTo(self.snp.centerX).multipliedBy(1.90)
+            $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.55)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.85)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.40)
         }
         
         warningTextView.snp.makeConstraints {
-//            $0.centerX.equalToSuperview()
-//            $0.centerY.equalToSuperview().multipliedBy(0.8)
-//            $0.width.equalTo(warningSize.width)
-//            $0.height.equalTo(warningSize.height)
+
             $0.right.equalToSuperview().multipliedBy(0.95)
             $0.bottom.equalToSuperview().multipliedBy(0.85)
             $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
@@ -163,10 +201,11 @@ class WarningView: UIView {
         
         
         imageView_key.snp.makeConstraints {
-            $0.centerY.equalToSuperview().multipliedBy(0.5)
-            $0.left.equalTo(self.snp.centerX).multipliedBy(0.01)  //画像の外側の縁に無色があるため,0.01とし,warningTextViewの左側とそろえる。
+//            $0.centerY.equalToSuperview().multipliedBy(0.5)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.35)
+            $0.left.equalTo(self.snp.centerX).multipliedBy(0.03)  //画像の外側の縁に無色があるため,0.01とし,warningTextViewの左側とそろえる。
             $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.75)
-            $0.right.equalTo(self.snp.centerX).multipliedBy(0.75)
+            $0.right.equalTo(self.snp.centerX).multipliedBy(0.78)
         }
         
 
