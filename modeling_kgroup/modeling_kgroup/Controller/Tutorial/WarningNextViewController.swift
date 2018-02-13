@@ -28,6 +28,9 @@ class WarningNextViewController: UIViewController {
         
         // 遷移するViewを定義する.
 //        let myNextViewController: UIViewController = TableViewController()
+        
+        SampleData.createSampleData()
+        
         let graph = Graph()
         let search = Search<Entity>(graph: graph).for(types: "Category")
         
