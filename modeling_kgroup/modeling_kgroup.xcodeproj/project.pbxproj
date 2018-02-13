@@ -22,6 +22,7 @@
 		7D5FABC31FB3F5050005B1CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FABC11FB3F5050005B1CA /* LaunchScreen.storyboard */; };
 		7D5FABCE1FB3F5050005B1CA /* modeling_kgroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABCD1FB3F5050005B1CA /* modeling_kgroupTests.swift */; };
 		7D5FABD91FB3F5050005B1CA /* modeling_kgroupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FABD81FB3F5050005B1CA /* modeling_kgroupUITests.swift */; };
+		7D6A8AE92032D6B600CCDED2 /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7D6A8AE82032D6B600CCDED2 /* photo9.jpg */; };
 		7D723FED1FDFDADA0094B716 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D723FEC1FDFDADA0094B716 /* FirstView.swift */; };
 		7DAE771420307D880082ACE9 /* AMXFontAutoScale.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DAE771520307D880082ACE9 /* AMXFontAutoScale.framework */; };
 		7DAE77172031379B0082ACE9 /* CardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAE77162031379B0082ACE9 /* CardTableView.swift */; };
@@ -89,6 +90,7 @@
 		7D5FABD41FB3F5050005B1CA /* modeling_kgroupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = modeling_kgroupUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5FABD81FB3F5050005B1CA /* modeling_kgroupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeling_kgroupUITests.swift; sourceTree = "<group>"; };
 		7D5FABDA1FB3F5050005B1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D6A8AE82032D6B600CCDED2 /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo9.jpg; sourceTree = "<group>"; };
 		7D723FEC1FDFDADA0094B716 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7DAE771520307D880082ACE9 /* AMXFontAutoScale.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AMXFontAutoScale.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DAE77162031379B0082ACE9 /* CardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				7DAE7784203145570082ACE9 /* photo8.jpg */,
 				7DAE771C20313C030082ACE9 /* PostsViewController.swift */,
 				7DAE771E20313C720082ACE9 /* SampleData.swift */,
+				7D6A8AE82032D6B600CCDED2 /* photo9.jpg */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6A8AE92032D6B600CCDED2 /* photo9.jpg in Resources */,
 				7DAE7794203145580082ACE9 /* photo3.jpg in Resources */,
 				7DAE778E203145580082ACE9 /* photo7.jpg in Resources */,
 				7DAE778F203145580082ACE9 /* photo8.jpg in Resources */,
