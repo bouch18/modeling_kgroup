@@ -1,0 +1,4 @@
+github "SnapKit/SnapKit" ~> 4.0.0
+github "CosmicMind/Material"
+github "devxoul/Then"
+github "alexmx/AMXFontAutoScale"

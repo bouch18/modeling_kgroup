@@ -1,8 +1,6 @@
 *.xcuserstate
-modeling_kgroup/Podfile
 modeling_kgroup/Podfile.lock
 modeling_kgroup/Pods/*
-modeling_kgroup/Cartfile
 modeling_kgroup/Carthage/*
 modeling_kgroup/Cartfile.resolved
 *UserInterfaceState.xcuserstate
