@@ -78,7 +78,7 @@ struct SampleData {
         let a4 = Entity(type: "Article")
         a4["title"] = "パスワード管理"
         a4["detail"] = "http://support.zaq.ne.jp/security/password/how.html"
-        a4["photo"] = UIImage.load(contentsOfFile: "photo8", ofType: "jpg")?.resize(toHeight: 300)
+        a4["photo"] = UIImage.load(contentsOfFile: "photo13", ofType: "jpg")?.resize(toHeight: 300)
         a4["content"] = "近年、不正ログインに関する事件が多く、パスワードの管理には十分な注意が必要である。\nパスワードの盗難については、原始的な盗み見から、\nウィルスや不正ログインなど方法は多数存在する。\nパスワードの管理はまず、人に見られない。\nそして、ウィルスの侵入や不正ログインの対策を行う必要がある。\nもし、被害にあった場合は警察庁や国民生活センターに問い合わせて見ると良い。"
         
                 a4.is(relationship: "Post").in(object: c2)
