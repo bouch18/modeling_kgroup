@@ -129,10 +129,12 @@ class CardTableViewCell: TableViewCell {
     
     private func prepareMoreButton() {
         moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: Color.blueGrey.base)
+//        moreButton.contentMode = .scaleToFill
     }
     
     private func prepareFavoriteButton() {
         favoriteButton = IconButton(image: Icon.favorite, tintColor: Color.red.base)
+//        favoriteButton.contentMode = .scaleToFill
 //        let rect:CGRect = CGRect(x:favoriteButton.frame.origin.x, y:favoriteButton.frame.origin.x, width:favoriteButton.frame.size.width*1.5, height:favoriteButton.frame.size.height*1.5)
 //        favoriteButton.frame.size.width = 100
 //        favoriteButton.frame.size.width = 100
@@ -141,6 +143,7 @@ class CardTableViewCell: TableViewCell {
     
     private func prepareShareButton() {
         shareButton = IconButton(image: Icon.cm.share, tintColor: Color.blueGrey.base)
+//        shareButton.contentMode = .scaleToFill
     }
     
     private func prepareToolbar() {

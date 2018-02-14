@@ -16,10 +16,17 @@ class ViewController: UIViewController {
 
     override func loadView() {
         self.view = startView
+        
+//        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+//        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+
     }
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+//        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+//        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+
         self.prepareAction()
         
     }

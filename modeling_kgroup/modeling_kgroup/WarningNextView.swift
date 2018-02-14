@@ -42,7 +42,7 @@ class WarningNextView: UIView {
         
         
         _ = self.warningNextView.then{
-            $0.text = "先程の画面は2017年度に流行したWannaCryというマルウェアのデモになります。\nマルウェアに被害にあうことがどのようなものか体験できたと思います。\n知っていることで対策ができるので、引き続きセキュリティ知識アプリとしてご利用ください"
+            $0.text = "先程の画面は2017年度に流行したWannaCryというマルウェアのデモになります。\n\nマルウェアに被害にあうことがどのようなものか体験できたと思います。\n\n知っていることで対策ができるので、引き続きセキュリティ知識アプリとしてご利用ください"
             $0.textColor = UIColor.black
             $0.isEditable = false
             $0.isSelectable = false
@@ -55,11 +55,14 @@ class WarningNextView: UIView {
         
         _ = self.nextButton.then{
             $0.setTitle("次へ", for: .normal)
-            $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+//            $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.titleColor = UIColor.white
             $0.layer.cornerRadius = 5
             //            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
-            $0.backgroundColor = UIColor.white
+//            $0.backgroundColor = UIColor.white
+            $0.backgroundColor = UIColor(red: 0.259,green: 0.667, blue: 0.780, alpha: 0.95)
             $0.pulseColor = UIColor(red:0.408,green: 0.812, blue: 0.902, alpha: 0.95)
+            $0.pulseColor = UIColor.white
             self.addSubview($0)
         }
     
@@ -79,7 +82,7 @@ class WarningNextView: UIView {
             $0.right.equalToSuperview().multipliedBy(0.95)
             $0.bottom.equalToSuperview().multipliedBy(0.85)
             $0.left.equalTo(self.snp.centerX).multipliedBy(0.1)
-            $0.top.equalTo(self.snp.centerY).multipliedBy(0.75)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.45)
         }
         
         nextButton.snp.makeConstraints {

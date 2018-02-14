@@ -9,6 +9,7 @@
 import UIKit
 import AudioToolbox
 import AVFoundation
+import AMXFontAutoScale
 
 class SecondViewController: UIViewController {
     
@@ -23,15 +24,20 @@ class SecondViewController: UIViewController {
         
         self.prepareAction()
     }
-    @objc func onClickMyButton(sender: UIButton){        
+    @objc func onClickMyButton(sender: UIButton){
+        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
+        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
         
         let myAlert: UIAlertController = UIAlertController(title: "\"アニマム\"はカメラへのアクセスを求めています", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
+//        myAlert.title.amx_autoScaleEnabled = false
+        
+//        myAlert.
         // OKアクション生成.
         let CancelAction = UIAlertAction(title: "許可しない", style: UIAlertActionStyle.default) { (action: UIAlertAction!) -> Void in
 //            print("許可しない")
         }
-        
+
         // Cancelアクション生成.
         let OkAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive) { (action: UIAlertAction!) -> Void in
             let mySecondViewController: UIViewController = WarningViewController()
@@ -39,6 +45,8 @@ class SecondViewController: UIViewController {
             self.present(mySecondViewController, animated: true, completion: nil)
             
 //            print("OK")
+            UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+            UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
         }
         
         

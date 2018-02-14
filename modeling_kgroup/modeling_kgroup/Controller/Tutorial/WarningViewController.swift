@@ -99,6 +99,9 @@ class WarningViewController: UIViewController {
     
     @objc func onPaymentButton(sender: UIButton){
         
+        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
+        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
+        
         let myAlert: UIAlertController = UIAlertController(title: "お支払のためにbitcoinに移動しますか？", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
         // cancelアクション生成.
@@ -114,6 +117,8 @@ class WarningViewController: UIViewController {
             self.stopTimerTest()
             self.stopSoundTest()
             //            print("OK")
+            UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+            UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
         }
         
         
@@ -123,6 +128,9 @@ class WarningViewController: UIViewController {
     }
     
     @objc func onCancelButton(sender: UIButton){
+        
+        UILabel.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
+        UITextView.amx_autoScaleFont(forReferenceScreenSize: .size12p9Inch)
         
         let myAlert: UIAlertController = UIAlertController(title: "本当にcancelしますか？", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
@@ -139,6 +147,8 @@ class WarningViewController: UIViewController {
             self.stopTimerTest()
             self.stopSoundTest()
             //            print("OK")
+            UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
+            UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
         }
         
         
