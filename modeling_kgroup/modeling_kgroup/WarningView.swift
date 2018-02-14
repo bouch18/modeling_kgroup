@@ -85,7 +85,7 @@ class WarningView: UIView {
             $0.layer.cornerRadius = 6
             $0.textAlignment = NSTextAlignment.center
             $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
-            $0.textColor = UIColor.yellow
+            $0.textColor = UIColor(red:0.925,green: 0.678, blue: 0.043, alpha: 1)
             self.addSubview($0)
         }
         

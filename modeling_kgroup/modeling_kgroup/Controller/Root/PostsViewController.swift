@@ -33,6 +33,8 @@ import Material
 import Graph
 
 class PostsViewController: UIViewController {
+    
+//    let takasa = view.bounds.height
     internal var category: String
     
     internal var graph: Graph!

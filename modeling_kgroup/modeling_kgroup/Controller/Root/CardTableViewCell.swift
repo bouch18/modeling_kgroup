@@ -32,6 +32,7 @@ import UIKit
 import Material
 import Motion
 import Graph
+import SnapKit
 
 class CardTableViewCell: TableViewCell {
     private var spacing: CGFloat = 10
@@ -74,7 +75,8 @@ class CardTableViewCell: TableViewCell {
         toolbar.detail = d["detail"] as? String
         
         if let image = d["photo"] as? UIImage {
-            presenterImageView.frame.size.height = image.height
+            presenterImageView.frame.size.height = 450//image.height
+//            print(
             Motion.async { [weak self, image = image] in
                 self?.presenterImageView.image = image
             }
@@ -131,6 +133,10 @@ class CardTableViewCell: TableViewCell {
     
     private func prepareFavoriteButton() {
         favoriteButton = IconButton(image: Icon.favorite, tintColor: Color.red.base)
+//        let rect:CGRect = CGRect(x:favoriteButton.frame.origin.x, y:favoriteButton.frame.origin.x, width:favoriteButton.frame.size.width*1.5, height:favoriteButton.frame.size.height*1.5)
+//        favoriteButton.frame.size.width = 100
+//        favoriteButton.frame.size.width = 100
+//        favoriteButton.frame = rect
     }
     
     private func prepareShareButton() {
@@ -139,7 +145,13 @@ class CardTableViewCell: TableViewCell {
     
     private func prepareToolbar() {
         toolbar = Toolbar()
+
+
         toolbar.heightPreset = .xlarge
+//        let takasa = PostsViewController()
+//        if self.snp.height >= 1000 {
+            toolbar.frame.size.height = 120
+//        }
         toolbar.contentEdgeInsetsPreset = .square3
         toolbar.titleLabel.textAlignment = .left
         toolbar.detailLabel.textAlignment = .left
@@ -148,7 +160,9 @@ class CardTableViewCell: TableViewCell {
     
     private func preparePresenterImageView() {
         presenterImageView = UIImageView()
-        presenterImageView.contentMode = .scaleAspectFill
+//        presenterImageView.contentMode = .scaleAspectFill
+        presenterImageView.contentMode = .scaleToFill
+        presenterImageView.frame.size.height = 1000
     }
     
     private func prepareContentLabel() {
@@ -160,6 +174,9 @@ class CardTableViewCell: TableViewCell {
     private func prepareBottomBar() {
         bottomBar = Bar()
         bottomBar.heightPreset = .xlarge
+//        if self.bounds.size.height >= 1000 {
+            bottomBar.frame.size.height = 120
+//        }
         bottomBar.contentEdgeInsetsPreset = .square3
         bottomBar.centerViews = [dateLabel]
         bottomBar.leftViews = [favoriteButton]

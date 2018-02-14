@@ -42,7 +42,7 @@ class WarningNextView: UIView {
         
         
         _ = self.warningNextView.then{
-            $0.text = "先程の画面は2017年度に流行した\nWannaCryというマルウェアの\nデモになります。"
+            $0.text = "先程の画面は2017年度に流行したWannaCryというマルウェアのデモになります。\nマルウェアに被害にあうことがどのようなものか体験できたと思います。\n知っていることで対策ができるので、引き続きセキュリティ知識アプリとしてご利用ください"
             $0.textColor = UIColor.black
             $0.isEditable = false
             $0.isSelectable = false

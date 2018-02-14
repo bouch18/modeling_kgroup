@@ -43,6 +43,9 @@ class AppTabsController: TabsController {
 extension AppTabsController {
     fileprivate func preparePageTabBar() {
         tabBarAlignment = .top
+        if view.bounds.height >= 1000 {
+            tabBar.frame.size.height = 100
+        }
         tabBar.isDividerHidden = true
         tabBar.lineAlignment = .bottom
         tabBar.setLineColor(Color.blue.lighten2, for: .selected)

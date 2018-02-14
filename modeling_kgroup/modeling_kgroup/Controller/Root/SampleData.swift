@@ -44,77 +44,45 @@ struct SampleData {
         graph.clear()
         
         let c1 = Entity(type: "Category")
-        c1["name"] = "セキュリティー"
+        c1["name"] = "話題"
         
         let a1 = Entity(type: "Article")
-        a1["title"] = "2017年 8月 ランサムウェア"
-        a1["detail"] = "https://www.npa.go.jp/cyber/ransom/index.html"
-        a1["photo"] = UIImage.load(contentsOfFile: "photo9", ofType: "jpg")?.resize(toHeight: 300)
-        a1["content"] = "2017年 8月頃に主にwindowsに感染するマルウェアが流行した。上記の画像のような見た目でファイルを削除するとユーザーを脅してお金を請求する。もし感染したら慌てずマルウェアの名前を検索したり警察庁のサイトにアクセスして対策を取ると良い"
+        a1["title"] = "仮想通貨「NEM」約580億円相当流出"
+        a1["detail"] = "http://www.tsr-net.co.jp/news/analysis/20180214_01.html"
+        a1["photo"] = UIImage.load(contentsOfFile: "photo11", ofType: "jpg")?.resize(toHeight: 300)
+        a1["content"] = "1月26日仮想通貨取引所「coincheck」が不正アクセスを受け、約580億円相当の仮想通貨「NEM」が流出した。原因として仮想通貨取引所では、ネットに接続しない別のサーバーに仮想通貨コインを置く「コールドウォレット」をいう方法で保管していなかった為、犯人に侵入されて盗まれてしまった可能性が高いと言われている。IT企業ではスピードを求められる為、安全性やコンプライアンスが後回しになることがよくある。金銭を直接扱う物は特に慎重になるべきだ。原因をしっかり究明し、セキュリティを向上させることを切に願いたい。"
         
         a1.is(relationship: "Post").in(object: c1)
         
         let a2 = Entity(type: "Article")
-        a2["title"] = "Pranayama Breath: Purify and Energize your Body and Mind with Kapalabhati"
-        a2["detail"] = "facebook.com/healthymind.io"
-        a2["photo"] = UIImage.load(contentsOfFile: "photo6", ofType: "jpg")?.resize(toHeight: 300)
-        a2["content"] = "To wake yourself up and get energized in the morning for the day ahead, you need to spend just about 5 minutes doing this wonderful breathing exercise!"
+        a2["title"] = "2017年 8月 ランサムウェア"
+        a2["detail"] = "https://www.npa.go.jp/cyber/ransom/index.html"
+        a2["photo"] = UIImage.load(contentsOfFile: "photo9", ofType: "jpg")?.resize(toHeight: 300)
+        a2["content"] = "2017年 8月頃に主にwindowsに感染するマルウェアが流行した。上記の画像のような見た目でファイルを削除するとユーザーを脅してお金を請求する。もし感染したら慌てずマルウェアの名前を検索したり警察庁のサイトにアクセスして対策を取ると良い"
         
         a2.is(relationship: "Post").in(object: c1)
         
-        //        let c2 = Entity(type: "Category")
-        //        c2["name"] = "Beauty"
-        //
-        //        let a3 = Entity(type: "Article")
-        //        a3["title"] = "Natural DIY Face Scrubs"
-        //        a3["detail"] = "facebook.com/healthymind.io"
-        //        a3["photo"] = UIImage.load(contentsOfFile: "photo7", ofType: "jpg")?.resize(toHeight: 300)
-        //        a3["content"] = "Exfoliation plays a significant role in keeping your skin youthful and glowing, as it removes dead skin cells from your skin's surface leaving it fresh and flawless."
-        //
-        //        a3.is(relationship: "Post").in(object: c2)
         
-        //        let a4 = Entity(type: "Article")
-        //        a4["title"] = "Natural Face Mask For Clean Youthful Skin"
-        //        a4["detail"] = "facebook.com/healthymind.io"
-        //        a4["photo"] = UIImage.load(contentsOfFile: "photo8", ofType: "jpg")?.resize(toHeight: 300)
-        //        a4["content"] = "The more I use natural oils and simple food for my skin and hair, the more I'm amazed with its goodness and wonderful effects! Who needs to buy cosmetics, when you can just get groceries? :)"
-        //
-        //        a4.is(relationship: "Post").in(object: c2)
         
-        //        let c3 = Entity(type: "Category")
-        //        c3["name"] = "Recipes"
-        //
-        //        let a5 = Entity(type: "Article")
-        //        a5["title"] = "Three Amazing Natural Teeth Whiteners"
-        //        a5["detail"] = "facebook.com/healthymind.io"
-        //        a5["photo"] = UIImage.load(contentsOfFile: "photo2", ofType: "jpg")?.resize(toHeight: 300)
-        //        a5["content"] = "Looking at the numerous amount of teeth whitening products on the market, which ones actually work?"
-        //
-        //        a5.is(relationship: "Post").in(object: c3)
+        let c2 = Entity(type: "Category")
+        c2["name"] = "パスワード"
+
+        let a3 = Entity(type: "Article")
+        a3["title"] = "総当たり攻撃"
+        a3["detail"] = "facebook.com/healthymind.io"
+        a3["photo"] = UIImage.load(contentsOfFile: "photo12", ofType: "jpg")?.resize(toHeight: 300)
+        a3["content"] = "考えられるすべてのパスワードを試す攻撃方法。条件として試行回数の上限がないとすれば総当たり攻撃が成功する。しかし、パスワードが長いと試行回数が増えるため、処理能力が高いCPUが必要になる。よって、攻撃されても試行が終了しないためにパスワードは長く、小文字や大文字、数字などを複雑にした物をパスワードにするべきである。"
+
+        a3.is(relationship: "Post").in(object: c2)
+
+        let a4 = Entity(type: "Article")
+        a4["title"] = "パスワード管理"
+        a4["detail"] = "http://support.zaq.ne.jp/security/password/how.html"
+        a4["photo"] = UIImage.load(contentsOfFile: "photo8", ofType: "jpg")?.resize(toHeight: 300)
+        a4["content"] = "近年、不正ログインに関する事件が多く、パスワードの管理には十分な注意が必要である。\nパスワードの盗難については、原始的な盗み見から、\nウィルスや不正ログインなど方法は多数存在する。\nパスワードの管理はまず、人に見られない。\nそして、ウィルスの侵入や不正ログインの対策を行う必要がある。\nもし、被害にあった場合は警察庁や国民生活センターに問い合わせて見ると良い。"
         
-        //        let a6 = Entity(type: "Article")
-        //        a6["title"] = "Avocado Beauty Oil"
-        //        a6["detail"] = "facebook.com/healthymind.io"
-        //        a6["photo"] = UIImage.load(contentsOfFile: "photo3", ofType: "jpg")?.resize(toHeight: 300)
-        //        a6["content"] = "My recently developed passion for essential oils led me to another wonderful discovery- avocado oil. Unaware of its existence, I was in a pharmacy in Russia looking at their essential oils selection. The pharmacist kindly suggested for me to try the avocado oil due to its important properties."
-        //
-        //        a6.is(relationship: "Post").in(object: c3)
+                a4.is(relationship: "Post").in(object: c2)
         
-        //        let a7 = Entity(type: "Article")
-        //        a7["title"] = "Breakfast Smoothie"
-        //        a7["detail"] = "facebook.com/healthymind.io"
-        //        a7["photo"] = UIImage.load(contentsOfFile: "photo4", ofType: "jpg")?.resize(toHeight: 300)
-        //        a7["content"] = "Wake up to a delicious smoothie that will provide you with much needed nutrients!"
-        //
-        //        a7.is(relationship: "Post").in(object: c3)
-        
-        //        let a8 = Entity(type: "Post")
-        //        a8["title"] = "Get Obsessed with this Vegan French Toast!"
-        //        a8["detail"] = "facebook.com/healthymind.io"
-        //        a8["photo"] = UIImage.load(contentsOfFile: "photo5", ofType: "jpg")?.resize(toHeight: 300)
-        //        a8["content"] = "If you are reading this, it means that I wasn't the only person who had no idea how easy it is to make a mind-blowing delicious Vegan French Toast! :)"
-        //
-        //        a8.is(relationship: "Post").in(object: c3)
         
         graph.sync()
     }

@@ -65,10 +65,16 @@ extension AppToolbarController {
     fileprivate func prepareStatusBar() {
         statusBarStyle = .lightContent
         statusBar.backgroundColor = Color.blue.darken3
+//        statusBar.snp.bottom.equalTo(self.snp.centerY).multipliedBy(0.3)
     }
     
     fileprivate func prepareToolbar() {
         toolbar.depthPreset = .none
+//        toolbar.depthPreset = .depth3
+//        toolbar.frame.origin.y = 1000
+        if view.bounds.height >= 1000 {
+            toolbar.frame.size.height = 120
+        }
         toolbar.backgroundColor = Color.blue.darken2
         
         toolbar.title = "セキュリティー情報"
@@ -80,5 +86,6 @@ extension AppToolbarController {
         
         toolbar.leftViews = [menuButton]
         toolbar.rightViews = [starButton, searchButton]
+        
     }
 }
