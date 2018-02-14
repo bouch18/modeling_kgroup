@@ -58,7 +58,8 @@ class WarningView: UIView {
     private func setup() {
         
 //        self.backgroundColor = UIColor.red
-        self.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+//        self.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+        self.backgroundColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
         
         _ = self.myLabel.then{
             $0.text = "\(minute):\(cnt)"
@@ -74,7 +75,7 @@ class WarningView: UIView {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.layer.cornerRadius = 10
             $0.textAlignment = NSTextAlignment.center
-            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.backgroundColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
             $0.textColor = UIColor.white
             self.addSubview($0)
         }
@@ -84,8 +85,8 @@ class WarningView: UIView {
             $0.font = UIFont.systemFont(ofSize: 18)
             $0.layer.cornerRadius = 6
             $0.textAlignment = NSTextAlignment.center
-            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
-            $0.textColor = UIColor(red:0.925,green: 0.678, blue: 0.043, alpha: 1)
+            $0.backgroundColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
+            $0.textColor = UIColor.yellow
             self.addSubview($0)
         }
         
@@ -94,7 +95,7 @@ class WarningView: UIView {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.layer.cornerRadius = 10
             $0.textAlignment = NSTextAlignment.center
-            $0.backgroundColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.backgroundColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
             $0.textColor = UIColor.white
             self.addSubview($0)
         }
@@ -111,7 +112,7 @@ class WarningView: UIView {
         
         _ = self.paymentButton.then{
             $0.setTitle("check pyment", for: .normal)
-            $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.titleColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
             $0.layer.cornerRadius = 5
             //            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
             $0.backgroundColor = UIColor(red:0.890, green: 0.890, blue: 0.890, alpha: 1)
@@ -121,7 +122,7 @@ class WarningView: UIView {
         
         _ = self.cancelButton.then{
             $0.setTitle("Decrypt", for: .normal)
-            $0.titleColor = UIColor(red:0.525, green: 0.082, blue: 0.239, alpha: 1)
+            $0.titleColor = UIColor(red:0.630, green: 0.101, blue: 0.227, alpha: 1)
             $0.layer.cornerRadius = 5
             //            $0.backgroundColor = UIColor(red:0.408,green: 0.812, blue: 0.765, alpha: 0.95)
             $0.backgroundColor = UIColor(red:0.890, green: 0.890, blue: 0.890, alpha: 1)
@@ -200,7 +201,7 @@ class WarningView: UIView {
         
         imageView_key.snp.makeConstraints {
 //            $0.centerY.equalToSuperview().multipliedBy(0.5)
-            $0.top.equalTo(self.snp.centerY).multipliedBy(0.35)
+            $0.top.equalTo(self.snp.centerY).multipliedBy(0.25)
             $0.left.equalTo(self.snp.centerX).multipliedBy(0.03)  //画像の外側の縁に無色があるため,0.01とし,warningTextViewの左側とそろえる。
             $0.bottom.equalTo(self.snp.centerY).multipliedBy(0.75)
             $0.right.equalTo(self.snp.centerX).multipliedBy(0.78)

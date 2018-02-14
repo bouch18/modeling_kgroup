@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
     }
     @objc func onClickMyButton(sender: UIButton){        
         
-        let myAlert: UIAlertController = UIAlertController(title: "\"アニマム\"は写真へのアクセスを求めています", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        let myAlert: UIAlertController = UIAlertController(title: "\"アニマム\"はカメラへのアクセスを求めています", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
         // OKアクション生成.
         let CancelAction = UIAlertAction(title: "許可しない", style: UIAlertActionStyle.default) { (action: UIAlertAction!) -> Void in
