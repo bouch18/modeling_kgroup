@@ -18,29 +18,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    let defaults = UserDefaults.standard
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        SampleData.createSampleData()
-//
-//        let graph = Graph()
-//        let search = Search<Entity>(graph: graph).for(types: "Category")
-//        
-//        var viewControllers = [PostsViewController]()
-//
-//        for category in search.sync() {
-//            if let name = category["name"] as? String {
-//                viewControllers.append(PostsViewController(category: name))
-//            }
-//        }
-//
+        if defaults.integer(forKey: "int") == 1{
+        SampleData.createSampleData()
+
+        let graph = Graph()
+        let search = Search<Entity>(graph: graph).for(types: "Category")
+
+        var viewControllers = [PostsViewController]()
+
+        for category in search.sync() {
+            if let name = category["name"] as? String {
+                viewControllers.append(PostsViewController(category: name))
+            }
+        }
+
 //        let appToolbarController = AppToolbarController(secondViewController: secondViewController)
+//        let toolbarController = AppToolbarController(rootViewController: tabsController)
+//        let menuController = AppFABMenuController(rootViewController: toolbarController)
+        let tabsController = AppTabsController(viewControllers: viewControllers)
+        let toolbarController = AppToolbarController(rootViewController: tabsController)
+        let menuController = AppFABMenuController(rootViewController: toolbarController)
+
+        window = UIWindow(frame: Screen.bounds)
+        window!.rootViewController = menuController
+        } else{
+            window = UIWindow(frame: Screen.bounds)
+            window!.rootViewController = startViewController
+        }
+//        window!.makeKeyAndVisible()
+        
         // Override point for customization after application launch.
         UILabel.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
         UITextView.amx_autoScaleFont(forReferenceScreenSize: .size4p7Inch)
 
-        window = UIWindow(frame: Screen.bounds)
-        window!.rootViewController = startViewController
+//        window = UIWindow(frame: Screen.bounds)
+//        window!.rootViewController = startViewController
 //        window!.rootViewController = TableViewController
         window!.makeKeyAndVisible()
         

@@ -29,6 +29,10 @@ class WarningNextViewController: UIViewController {
         // 遷移するViewを定義する.
 //        let myNextViewController: UIViewController = TableViewController()
         
+        let appdel = AppDelegate()
+        appdel.defaults.set(1, forKey: "int")
+
+        
         SampleData.createSampleData()
         
         let graph = Graph()
